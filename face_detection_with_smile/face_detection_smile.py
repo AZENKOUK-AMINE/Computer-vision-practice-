@@ -13,15 +13,13 @@ def detect_faces_and_eyes(gray , frame):
         eyes = eye_cascade.detectMultiScale(roi_gray)
         for(ex,ey,ew,eh) in eyes:
             cv.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-        smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 20)
+        smiles = smile_cascade.detectMultiScale(roi_gray, 1.8, 27)
         for(sx,sy,sw,sh) in smiles:
             cv.rectangle(roi_color,(sx,sy),(sx+sw,sy+sh),(0,0,255),2)
 
     return frame
 
-print(face_cascade.empty())
-print(eye_cascade.empty())
-print(smile_cascade.empty())
+
 
 video_capture = cv.VideoCapture(1)
 while True: 
