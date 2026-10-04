@@ -7,6 +7,7 @@ if img is None:
 else :
     print("image found")
     print(img.shape)
+    print(img.size)
 
 
 cv.imshow("parfume", img)
