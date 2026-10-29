@@ -9,6 +9,9 @@ gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 
 cv.imshow('Gray Image', gray)
 
+rgb = cv.cvtColor(gray, cv.COLOR_GRAY2RGB)
+cv.imshow('RGB Image', rgb)
+
 
 
 
